@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham Gas Service</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./Assets/Styles/style.css">
+    <!-- these scripts weere required for excel manupulation but that is take care by npm now.-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>     -->
+</head>
+
+<body class="flex-container">
+    <div class="header">
+        <p>Heading</p>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="#PendingBookingSortedList" class="active">PendingBookingSortedList</a>
+        <a href="#news">News</a>
+        <a href="#about">About</a>
+    </div>
+    <div class="mainBody">
+        <div class="subNavaigation"></div>
+        <div class="mainContent">
+            <div class="formcontainer">
+                    <div class="fileuploadcontainer">
+                        <label class="fileuploadlabel">Upload ActiveConsumer List</label>
+                        <input class="fileuploadbutton" type="file" id="fileupload1" name="filename">    
+                    </div>
+                    <div class="fileuploadcontainer">
+                        <label class="fileuploadlabel">Upload PendingConsumer list</label>
+                        <input class="fileuploadbutton" type="file" id="fileupload2" name="filename">    
+                    </div>
+                    <button id="getReportButton">Generate</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+
+</html>
