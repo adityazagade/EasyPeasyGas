@@ -6,6 +6,8 @@ document.addEventListener('ResetAndInitialize', init);
 
 function doDataStuff(){
   generateExcelFile();
+  document.getElementById("getReportButton").innerText = "Generated";
+  document.getElementById("getReportButton").style.backgroundColor = "green";
 }
 
 init();
@@ -23,11 +25,15 @@ activeConsumerFileName= "";
 pendingBooklingsObj=[];
 pendingBookingConsumerFileName = "";
 areaWiseNumber = [];
+// document.getElementById("btn-1").innerText = fileUploadBtnLabel;
+// document.getElementById("btn-2").innerText = fileUploadBtnLabel;
+// document.getElementById("btn-1").style.backgroundColor = fileUploadBtnColor;
+// document.getElementById("btn-2").style.backgroundColor = fileUploadBtnColor;
 }
 
 function generateExcelFile(){
   (new ExcelToJSON()).createFile(pendingBooklingsObj,areaWiseNumber);
-  document.dispatchEvent('ResetAndInitialize')
+  document.dispatchEvent(new Event("ResetAndInitialize"));
 }
 
 function processRequest(){
@@ -60,7 +66,7 @@ function generateFile(file1, file2){
 }
 
 function readCSV(file, file2){
-  if((file.name) == "ActiveConsumer_Report.csv"){
+  if(file.name.indexOf("ActiveConsumer_Report") > -1){
     let reader = new FileReader();
     reader.onload = function(progressEvent){
       // Entire file
@@ -229,3 +235,13 @@ var ExcelToJSON = function() {
 
 var button = document.getElementById('getReportButton');
 button.addEventListener("click",processRequest);
+
+document.getElementById("fileupload1").addEventListener('change', (e) => {uploaded(e);});
+document.getElementById("fileupload2").addEventListener('change', (e) => {uploaded(e);});
+
+function uploaded(e){
+  console.log("Uploaded called");
+  console.log(e);
+  e.target.nextElementSibling.innerText = "Uploaded";
+  e.target.nextElementSibling.style.backgroundColor = "green";
+}
