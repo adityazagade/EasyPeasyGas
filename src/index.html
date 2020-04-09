@@ -8,39 +8,57 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="./Assets/Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./Assets/Styles/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+
+
     <!-- these scripts weere required for excel manupulation but that is take care by npm now.-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script> -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>     -->
 </head>
 
-<body class="flex-container">
-    <div class="header">
-        <p>Heading</p>
-    </div>
-    <div class="topnav" id="myTopnav">
-        <a href="#PendingBookingSortedList" class="active">PendingBookingSortedList</a>
-        <a href="#news">News</a>
-        <a href="#about">About</a>
-    </div>
-    <div class="mainBody">
-        <div class="subNavaigation"></div>
-        <div class="mainContent">
-            <div class="formcontainer">
-                    <div class="fileuploadcontainer">
-                        <label class="fileuploadlabel">Upload ActiveConsumer List</label>
-                        <input class="fileuploadbutton" type="file" id="fileupload1" name="filename">    
-                    </div>
-                    <div class="fileuploadcontainer">
-                        <label class="fileuploadlabel">Upload PendingConsumer list</label>
-                        <input class="fileuploadbutton" type="file" id="fileupload2" name="filename">    
-                    </div>
-                    <button id="getReportButton">Generate</button>
-            </div>
+<body class="w3-container" style="margin-top: -2%;">
+    <div style="margin-bottom: -2%;">
+        <div>
+            <img src="./Assets/images/hpGasLogo.png" style="float: left; width: 150px;">
+        </div>
+        <div>
+            <p class="w3-text-theme" style="font-weight: 700;font-size: 50px; ">SHUBHAM GAS SERVICE</p>
         </div>
     </div>
-    <div class="footer">
-        <h1>Footer</h1>
-    </div>
-</body>
 
+
+    <div class="navbar w3-card">
+        <a class="active" href="#PendingBookingSortedList"><i class="fa fa-fw fa-home"></i> Pending Booking Sorted List</a>
+        <a href="#news"><i class="fa fa-fw fa-search"></i> News</a>
+        <a href="#about"><i class="fa fa-fw fa-user"></i> About</a>
+    </div>
+
+    <div class="w3-card w3-half w3-center w3-padding-32" style="margin-left: 25%; margin-top: 2%;">
+            <div>
+                <h2 class="w3-text-theme">Pending Booking Sorted List Generator</h2>
+                <hr class="horizontaildiv">
+                    <div class="fileuploadcontainer">
+                        <label class="fileuploadlabel">Upload ActiveConsumer List:</label>
+                        <input type="file" id="fileupload1" name="filename"/>
+                        <label for="fileupload1" /><i class="fas fa-cloud-upload-alt"></i> Upload a file</label>   
+                    </div>
+                    <div class="fileuploadcontainer">
+                        <label class="fileuploadlabel">Upload PendingConsumer list:</label>
+                    
+                        <input type="file" id="fileupload2" name="filename" />
+                        <label for="fileupload2" class="btn-2"><i class="fas fa-cloud-upload-alt"></i> Upload a file</label> 
+                    </div>
+
+
+
+                    <hr class="horizontaildiv2">
+
+                    <button class="w3-btn w3-round-large w3-theme w3-margin-top" id="getReportButton">Generate</button>
+            </div>
+    </div>
+
+</body>
 </html>

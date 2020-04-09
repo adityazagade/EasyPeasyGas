@@ -1,79 +1,52 @@
-.header {
-  flex-grow: 0;
+body{
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #083f88;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
   text-align: center;
-  background: #1abc9c;
+  padding: 12px;
   color: white;
-  }
-
-.footer {
-  flex-grow: 0;
-  background: #555;
-  }
-
-.mainBody {
-  flex-grow: 7;
-  display: flex;
-  flex-direction: row;
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  padding: 0;
-  margin: 0;
-/* border-style: ridge */
-  /* flex-direction: column; */
-  /* flex-wrap: nowrap; */
-}
-
-.topnav {
-  /* background: #eee; */
-  flex-grow: 0;
-  display: flex;
-  background-color: #333;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  flex-direction: row;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 17px;
 }
 
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
 }
 
-/* Add an active class to highlight the current page */
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+/* Current/active navbar link */
+.active {
+  background-color: #eb3d26;
 }
 
-.subNavaigation{
-  flex-grow: 1;
-  background-color:whitesmoke;
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
 }
 
-.mainContent{
-  background-color:white;
-  flex-grow: 3;
-  padding-top:100px;
-}
-
-.formcontainer{
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  margin: auto;
+.horizontaildiv{
   width: 50%;
-  height: 50%;
+  margin-left: 25%;
+}
+
+.horizontaildiv2{
+  width: 30%;
+  margin-left: 33%;
 }
 
 .fileuploadcontainer{
@@ -83,15 +56,29 @@
   padding:0px 50px 0px 0;
 }
 .fileUploadButton{
-  padding:0px 50px 0px 0;  
+  padding:0px 50px 0px 0; 
 }
 
-input[type=submit] {
-  width: 20%;
-  background-color: #4CAF50;
-  color: black;
-  padding: 14px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+[type="file"] {
+  height: 0;
+  overflow: hidden;
+  width: 0;
 }
+
+[type="file"] + label {
+  background: #083f88;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+    font-size: inherit;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  outline: none;
+  padding: 0.5rem 30px;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
