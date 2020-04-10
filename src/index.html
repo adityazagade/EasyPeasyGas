@@ -4,25 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Gas Service</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
     <link rel="shortcut icon" href="favicon.png" type="image/png">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" type="text/css" href="./Assets/Styles/style.css">
-    <link rel="stylesheet" type="text/css" href="./Assets/Styles/w3.css">
+    <link rel="stylesheet" href="./Assets/Styles/style.css">
+    <link rel="stylesheet" href="./Assets/Styles/w3.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
-
-
-    <!-- these scripts weere required for excel manupulation but that is take care by npm now.-->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script> -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>     -->
 </head>
 
 <body class="w3-container" style="margin-top: -2%;">
     <div style="margin-bottom: -2%;">
         <div>
-            <img src="./Assets/images/hpGasLogo.png" style="float: left; width: 150px;">
+            <img id="logo" style="float: left; width: 150px;">
         </div>
         <div>
             <p class="w3-text-theme" style="font-weight: 700;font-size: 50px; ">SHUBHAM GAS SERVICE</p>
