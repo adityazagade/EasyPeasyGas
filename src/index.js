@@ -103,7 +103,6 @@ function ProcessPendingConsumers(e) {
       updateAreaWiseList(temp['Area']);
       pendingBooklingsObj.push(pendingBookingExtended);
     }
-    console.log(activeConsumerObj);
     console.log(`Total Pending Orders read: ${pendingBooklingsObj.length}`);
     console.log(`Pending Orders with Problems: ${lines.length - pendingBooklingsObj.length - 1}`);
     document.dispatchEvent(new Event('DataGenerated'));
