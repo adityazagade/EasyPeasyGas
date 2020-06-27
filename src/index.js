@@ -3,7 +3,6 @@ export var XLSX = require('../node_modules/xlsx');
 // import './Assets/Styles/w3.css'
 import logo from './Assets/Images/hpGasLogo.png'
 import ActiveConsumer from './Model/ActiveConsumer';
-import PendingBooking from './Model/PendingBooking';
 import PendingBookingExtended from './Model/PendingBookingExtended';
 
 var activeConsumerObj = [];
@@ -92,13 +91,13 @@ function ProcessPendingConsumers(e) {
 
     for (let line = 1; line < lines.length; line++) {
       let row = lines[line].split(",");
-      let pendingBooking = new PendingBooking(row);
+      // let pendingBooking = new PendingBooking(row);
       let temp = getInfo(row[6]);
       let pendingBookingExtended;
       if (Object.keys(temp).length > 0) {
-        pendingBookingExtended = new PendingBookingExtended(pendingBooking, temp['Area'], temp['NatureOfConnection']);
+        pendingBookingExtended = new PendingBookingExtended(row, temp['Area'], temp['NatureOfConnection']);
       } else {
-        pendingBookingExtended = new PendingBookingExtended(pendingBooking, "", "");
+        pendingBookingExtended = new PendingBookingExtended(row, "", "");
       }
       updateAreaWiseList(temp['Area']);
       pendingBooklingsObj.push(pendingBookingExtended);
